@@ -98,11 +98,13 @@ apply.
 The first plan for a tenant reads:
 
 ```text
-Plan: 1 to import, 2 to add, 0 to change, 0 to destroy.
+Plan: 1 to import, 2 to add, 1 to change, 0 to destroy.
 ```
 
-The import is the theme, which every tenant already has. The additions are
-the passkey configuration and the sign-in flow.
+The import and the change are both the theme. Every tenant is created with a
+default theme, so Terraform adopts it and then sets its name.
+
+The additions are the passkey configuration and the sign-in flow.
 
 Leave `imports.tf` in place, or delete it after the first apply. See
 [import blocks](https://developer.hashicorp.com/terraform/language/import).
