@@ -9,7 +9,7 @@ terraform {
   }
 
   cloud {
-    organization = "your-org"
+    organization = "authsignal_terraform"
 
     workspaces {
       name    = "brand-a-dev"
